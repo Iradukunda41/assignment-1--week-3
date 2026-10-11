@@ -1,0 +1,321 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #111;
+  line-height: 1.625;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+/* Visible keyboard focus on every link, button and field */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* ---------- Navbar (mobile first) ---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #fff;
+  padding: 18px 40px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-links a {
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #000;
+  transition: 0.15s;
+}
+
+.nav-links a:hover {
+  background: #6b7280;
+  color: #fff;
+  opacity: 0.7;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text h1 {
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 5px;
+  color: #fff;
+}
+
+.hero-text span {
+  margin-right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 12px 18px;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 60px 0;
+  /* keeps headings visible below the fixed navbar */
+  scroll-margin-top: 128px;
+}
+
+section h2 {
+  margin-bottom: 32px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 16px;
+  font-size: 28px;
+}
+
+/* ---------- Projects ---------- */
+.project-grid,
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.project-card span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ---------- About / Team ---------- */
+.about-text {
+  margin-bottom: 40px;
+}
+
+.team-card {
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.team-body {
+  padding: 16px;
+}
+
+.team-card img {
+  width: 100%;
+  background: #111;
+  filter: grayscale(100%);
+}
+
+.team-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.333;
+  color: #000;
+}
+
+.team-card span {
+  display: block;
+  margin: 4px 0 12px;
+  color: #6b7280;
+}
+
+.team-contact {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 9999px;
+  background: #eee;
+  text-align: center;
+  transition: 0.15s;
+}
+
+.team-contact:hover {
+  background: #ddd;
+}
+
+/* ---------- Contact form ---------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #000;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form button {
+  width: fit-content;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 9999px;
+  background: #000;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.contact-form button:hover {
+  background: #1f2937;
+}
+
+/* ---------- Map ---------- */
+.map-intro {
+  margin-bottom: 24px;
+}
+
+.map img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.map-caption {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 32px;
+}
+
+/* ---------- Breakpoints (same values as Tailwind: sm 640, md 768, lg 1024) ---------- */
+@media (min-width: 640px) {
+  .project-grid,
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+  }
+
+  .nav-links {
+    gap: 30px;
+  }
+
+  .hero img {
+    height: 90vh;
+  }
+
+  .hero-text h1 {
+    font-size: 50px;
+  }
+
+  section {
+    scroll-margin-top: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-grid,
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
